@@ -14,7 +14,8 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   registerPayload: RegisterPayload;
 
-  constructor(private formBuilder:FormBuilder, private authService: AuthService) {
+  constructor(private formBuilder:FormBuilder, private authService: AuthService,
+    private router:Router) {
     this.registerForm = this.formBuilder.group({
       username:'',
       email:'',
@@ -41,6 +42,7 @@ export class RegisterComponent implements OnInit {
 
     this.authService.register(this.registerPayload).subscribe(data => {
       console.log('Register success');
+      this.router.navigateByUrl("/register-success");
     }, error => {
       console.log("Register failed");
     });

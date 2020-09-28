@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavComponent } from './nav/nav.component';
 import { RegisterComponent } from './auth/register/register.component';
+import { RegisterSuccessComponent } from './auth/register-success/register-success.component';
 import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -27,7 +28,9 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      {path: 'register', component: RegisterComponent}
+      {path: 'register-success', component: RegisterSuccessComponent},
+      {path: 'register', component: RegisterComponent},
+      {path: 'sign-in', component: SignInComponent}
     ])
   ],
   providers: [],

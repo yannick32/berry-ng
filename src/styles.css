@@ -12,3 +12,7 @@
 .btn-facebook:hover, .btn-facebook:visited, .btn-twitter:hover, .btn-twitter:visited {
     color: white;
 }
+
+.min-vh-100-navbar {
+    min-height: calc(100vh - 56px);
+}
