@@ -16,3 +16,7 @@
 .min-vh-100-navbar {
     min-height: calc(100vh - 56px);
 }
+
+.navbar-dark #navbarSupportedContent .navbar-nav .nav-link {
+    color: rgb(221, 221, 221);
+}

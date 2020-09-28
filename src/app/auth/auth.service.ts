@@ -18,6 +18,7 @@ export class AuthService {
   register(registerPayload: RegisterPayload): Observable<any> {
     return this.httpClient.post(this.url + "signup", registerPayload);
   }
+
   login(loginPayload: LoginPayload): Observable<boolean> {
     return this.httpClient.post<JwtAuthResponse>(this.url + 'login', loginPayload)
       .pipe(map(data => {
@@ -25,5 +26,8 @@ export class AuthService {
         this.localStorageService.store('username', data.username);
         return true;
       }));
+  }
+  isAuthenticated(): boolean {
+    return this.localStorageService.retrieve('username') != null;
   }
 }
