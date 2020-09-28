@@ -11,13 +11,16 @@ import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { NgxWebstorageModule } from 'ngx-webstorage';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     RegisterComponent,
-    SignInComponent
+    SignInComponent,
+    HomeComponent
   ],
   imports: [
     HttpClientModule,
@@ -27,9 +30,11 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     ReactiveFormsModule,
     ReactiveFormsModule,
+    NgxWebstorageModule.forRoot(),
     RouterModule.forRoot([
-      {path: 'register-success', component: RegisterSuccessComponent},
+      {path: 'home', component: HomeComponent},
       {path: 'register', component: RegisterComponent},
+      {path: 'register-success', component: RegisterSuccessComponent},
       {path: 'sign-in', component: SignInComponent}
     ])
   ],
