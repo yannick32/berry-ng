@@ -5,7 +5,7 @@
             <div>
                 <p><i class="fas fa-user"></i> Author: {{post.username}}</p>
             </div>
-            <p [innerHTML]="post.content"></p>
+            <p [innerHTML]="post.content.substring(0,5000)"></p>
             <div><a href="/post/{{post.id}}">Read more</a></div>
             <hr>
         </div>

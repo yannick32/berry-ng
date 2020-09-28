@@ -12,11 +12,15 @@ export class CreatePostService {
 
   constructor(private httpClient: HttpClient) { }
 
-  createPost(postPayload: PostPayload){
+  createPost(postPayload: PostPayload) {
     return this.httpClient.post(this.url, postPayload);
   }
 
-  getAllPosts(): Observable<Array<PostPayload>>{
+  getAllPosts(): Observable<Array<PostPayload>> {
     return this.httpClient.get<Array<PostPayload>>(this.url + '/all');
+  }
+
+  getPostById(postId: Number): Observable<PostPayload> {
+    return this.httpClient.get<PostPayload>(this.url + '/' + postId);
   }
 }

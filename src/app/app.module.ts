@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { ExploreComponent } from './explore/explore.component';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ExploreComponent } from './explore/explore.component';
     SignInComponent,
     HomeComponent,
     CreatePostComponent,
-    ExploreComponent
+    ExploreComponent,
+    PostComponent
   ],
   imports: [
     HttpClientModule,
@@ -45,7 +47,8 @@ import { ExploreComponent } from './explore/explore.component';
       {path: 'register-success', component: RegisterSuccessComponent},
       {path: 'sign-in', component: SignInComponent},
       {path: 'create-post', component: CreatePostComponent},
-      {path: 'explore', component: ExploreComponent}
+      {path: 'explore', component: ExploreComponent},
+      {path: 'post/:id', component: PostComponent}
     ])
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true}],
