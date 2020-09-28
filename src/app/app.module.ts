@@ -16,6 +16,7 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
 import { HomeComponent } from './home/home.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
+import { ExploreComponent } from './explore/explore.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     RegisterComponent,
     SignInComponent,
     HomeComponent,
-    CreatePostComponent
+    CreatePostComponent,
+    ExploreComponent
   ],
   imports: [
     HttpClientModule,
@@ -42,7 +44,8 @@ import { EditorModule } from '@tinymce/tinymce-angular';
       {path: 'register', component: RegisterComponent},
       {path: 'register-success', component: RegisterSuccessComponent},
       {path: 'sign-in', component: SignInComponent},
-      {path: 'create-post', component: CreatePostComponent}
+      {path: 'create-post', component: CreatePostComponent},
+      {path: 'explore', component: ExploreComponent}
     ])
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true}],
