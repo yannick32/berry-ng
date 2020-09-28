@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.btn-twitter{
+    color: white;
+    background-color: #1DA1F3;
+}
+
+.btn-facebook{
+    color: white;
+    background-color: #3b5998 ;
+}
+
+.btn-facebook:hover, .btn-facebook:visited, .btn-twitter:hover, .btn-twitter:visited {
+    color: white;
+}
