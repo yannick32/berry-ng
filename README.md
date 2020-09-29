@@ -1,3 +1,6 @@
+This is the Angular front end part of the application.
+To see the Spring REST back end repository click [here](https://github.com/yannick32/berry-rest)
+
 # BerryNg
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
