@@ -1,3 +1,5 @@
+// const { url } = require("inspector");
+
 function validatePassword(){
     let password = document.getElementById("password")
   , confirm_password = document.getElementById("confirm_password");

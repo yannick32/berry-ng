@@ -18,14 +18,14 @@ export class AuthService {
   constructor(private httpClient: HttpClient, private localStorageService: LocalStorageService) { }
 
   register(registerPayload: RegisterPayload): Observable<any> {
-    return this.httpClient.post(this.url + "signup", registerPayload);
+    return this.httpClient.post(this.url + "/signup", registerPayload);
   }
 
   login(loginPayload: LoginPayload): Observable<boolean> {
     return this.httpClient.post<JwtAuthResponse>(this.url + '/login', loginPayload)
       .pipe(map(data => {
         this.localStorageService.store(this.authTokenName, data.authenticationToken);
-        this.localStorageService.store('/username', data.username);
+        this.localStorageService.store('username', data.username);
         return true;
       }));
   }
